@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<script src="/app.js" defer></script>
+		<title>Tip Calculator</title>
+	</head>
+	<body>
+		<h1 class="title">SPLITTER</h1>
+		<div class="container">
+			<!-- Bill -->
+			<div class="bill">
+				<p>Bill</p>
+				<input type="text" id="bill" placeholder="0" />
+			</div>
+			<!-- Tip Percentage -->
+			<div class="tip-percent">
+				<p>Select Tip</p>
+				<div><p>5%</p></div>
+				<div><p>10%</p></div>
+				<div><p>15%</p></div>
+				<div><p>20%</p></div>
+				<div><p>25%</p></div>
+				<div><p>50%</p></div>
+				<input type="text" placeholder="Custom" />
+			</div>
+			<!-- Number of Peoples -->
+			<div class="people-nums">
+				<p>Number of People</p>
+				<input type="text" placeholder="0" />
+			</div>
+			<!-- Showing Tip Cost -->
+			<div class="tip">
+				<div>
+					<div class="tip-amount-container">
+						<div>
+							<p>Tip Amount</p>
+							<p class="person">/person</p>
+						</div>
+						<h1 id="tip-amount">$0.00</h1>
+					</div>
+					<div class="total-container">
+						<div>
+							<p>Total</p>
+							<p>/person</p>
+						</div>
+						<h1 id="total">$0.00</h1>
+					</div>
+				</div>
+				<a href="" class="btn" id="reset">RESET</a>
+			</div>
+		</div>
+	</body>
+</html>
