@@ -1,7 +1,7 @@
 :root {
 	--Strong-cyan: hsl(172, 67%, 45%);
 	--Very-dark-cyan: hsl(183, 100%, 15%);
-	--Dark-grayish-cyan: hsl(186, 14%, 43%);
+	--Darker-grayish-cyan: hsl(186, 14%, 43%);
 	--Dark-grayish-cyan: hsl(184, 14%, 56%);
 	--Light-grayish-cyan: hsl(185, 41%, 84%);
 	--very-Light-grayish-cyan: hsl(189, 41%, 97%);
@@ -26,19 +26,121 @@ body {
 }
 
 .title {
-	font-size: 1.4rem;
+	font-size: 1.1rem;
 	color: var(--Very-dark-cyan);
 	width: 40px;
+	letter-spacing: 6px;
 }
 
 .container {
-	width: 60vw;
+	margin-top: 3rem;
+	width: 50vw;
 	background-color: var(--very-Light-grayish-cyan);
+	border-radius: 10px;
+	box-shadow: 2px 2px 20px 5px hsla(172, 67%, 45%, 0.3);
+	padding: 2rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+		'bill tip'
+		'tip-percent tip'
+		'people-nums tip';
+	gap: 2rem;
+	/* justify-content: center;align-items: center; */
+}
+
+.bill {
+	grid-area: bill;
+}
+
+.bill p {
+	font-size: 0.75rem;
+	color: var(--Very-dark-cyan);
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+
+.tip-percent {
+	grid-area: tip-percent;
+}
+
+.bill .input {
+	position: relative;
 }
 
 .bill input {
-	text-align: left;
+	background-color: hsla(197, 7%, 81%, 0.2);
+	width: 100%;
+	padding: 0.2rem 1rem;
+	font-weight: 700;
+	font-size: 1.1rem;
+	border-radius: 5px;
+	font-family: 'Space Mono', monospace;
+	color: var(--Very-dark-cyan);
+	text-align: right;
 	outline: none;
 	border: none;
 	padding-left: 20px;
+}
+
+.bill input::placeholder {
+	opacity: 0.5;
+	font-size: 1.1rem;
+}
+
+.bill .input::after {
+	content: '';
+	background: url('/images/icon-dollar.svg') no-repeat;
+	object-fit: contain;
+	position: absolute;
+	/* height: 10px; */
+	/* width: 10px; */
+	left: 10px;
+	top: 8px;
+	padding: 10px;
+}
+
+.tip-percent .percents {
+	display: flex;
+	flex-wrap: wrap;
+	border-radius: 5px;
+	gap: 1rem;
+}
+
+.percents div:not(.input) {
+	background: var(--Very-dark-cyan);
+	padding: 0.4rem 0.8rem;
+}
+
+.people-nums {
+	grid-area: people-nums;
+}
+
+.tip {
+	grid-area: tip;
+	background-color: var(--Very-dark-cyan);
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.tip .tip-amount-container,
+.tip .total-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.tip .btn {
+	margin-top: 3rem;
+	display: inline-block;
+	text-decoration: none;
+	background-color: hsla(177, 78%, 32%, 0.7);
+	opacity: 0.8;
+	width: 100%;
+	color: var(--Very-dark-cyan);
+	text-align: center;
+	font-size: 14px;
+	border-radius: 5px;
+	padding: 0.35rem 0;
 }
