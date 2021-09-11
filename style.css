@@ -48,17 +48,16 @@ input:focus {
 .tip-percent > p,
 .bill > p,
 .people-nums > p {
-	font-size: 1rem;
+	font-size: 0.9rem;
 	color: var(--Very-dark-cyan);
 	font-weight: 700;
 	margin-bottom: 10px;
 }
 
 /* ------------------------- Title ----------------- */
-.title {
+.title h1 {
 	font-size: 1.1rem;
 	color: var(--Very-dark-cyan);
-	width: 40px;
 	letter-spacing: 6px;
 }
 
@@ -128,13 +127,18 @@ input:focus {
 .percents div:not(.input) {
 	background: var(--Very-dark-cyan);
 	padding: 0.4rem 0.8rem;
-	max-width: 140px;
+	max-width: 180px;
 	width: 100px;
 	font-weight: 700;
 	border-radius: 5px;
 	text-align: center;
 	font-size: 1.4rem;
 	color: var(--very-Light-grayish-cyan);
+	cursor: pointer;
+}
+
+.percents div {
+	flex-grow: 1;
 }
 
 .percents .input {
@@ -232,4 +236,44 @@ input:focus {
 	font-size: 14px;
 	border-radius: 5px;
 	padding: 0.45rem 0;
+}
+
+@media (max-width: 1000px) {
+	.container {
+		width: 87vw;
+	}
+}
+
+@media (max-width: 700px) {
+	.title {
+		margin-top: 2rem;
+	}
+
+	.title h1 {
+		font-size: 2.5rem;
+		margin: 0 auto;
+	}
+	.container {
+		width: 80vw;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			'bill'
+			'tip-percent'
+			'people-nums'
+			'tip';
+	}
+}
+
+@media (max-width: 500px) {
+	.container {
+		width: 90vw;
+	}
+
+	.percents div {
+		flex-grow: 1;
+	}
+
+	/* .tip-percent .percents {
+		flex-basis: 1;
+	} */
 }
