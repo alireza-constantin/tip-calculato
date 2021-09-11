@@ -23,28 +23,41 @@
 		<div class="container">
 			<!-- Bill -->
 			<div class="bill">
-				<p>Bill</p>
+				<div>
+					<p>Bill</p>
+					<p class="warn-msg">can't be zero</p>
+				</div>
 				<div class="input">
-					<input type="text" id="bill" placeholder="0" />
+					<input type="text" id="bill-input" placeholder="0" />
 				</div>
 			</div>
 			<!-- Tip Percentage -->
 			<div class="tip-percent">
-				<p>Select Tip %</p>
+				<div>
+					<p>Select Tip %</p>
+					<p class="warn-msg">can't be zero</p>
+				</div>
+
 				<div class="percents">
 					<div><p>5%</p></div>
 					<div><p>10%</p></div>
 					<div><p>15%</p></div>
 					<div><p>25%</p></div>
 					<div><p>50%</p></div>
-					<div class="input"><input type="text" placeholder="Custom" /></div>
+					<div class="input">
+						<input type="text" id="percent-input" placeholder="Custom" />
+					</div>
 				</div>
 			</div>
 			<!-- Number of Peoples -->
 			<div class="people-nums">
-				<p>Number of People</p>
+				<div>
+					<p>Number of People</p>
+					<p class="warn-msg">can't be zero</p>
+				</div>
+
 				<div class="input">
-					<input type="text" placeholder="0" />
+					<input type="text" placeholder="0" id="people-num-input" />
 				</div>
 			</div>
 			<!-- Showing Tip Cost -->
@@ -62,7 +75,7 @@
 							<p>Total</p>
 							<p class="person">/ person</p>
 						</div>
-						<h1 id="total">$0.00</h1>
+						<h1 id="total-tip">$0.00</h1>
 					</div>
 				</div>
 				<a href="" class="btn" id="reset">RESET</a>

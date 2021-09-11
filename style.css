@@ -45,13 +45,41 @@ input:focus {
 	border: 2px solid var(--Strong-cyan);
 }
 
-.tip-percent > p,
-.bill > p,
-.people-nums > p {
+.tip-percent > div > p,
+.bill > div > p,
+.people-nums > div > p {
 	font-size: 0.9rem;
 	color: var(--Very-dark-cyan);
 	font-weight: 700;
 	margin-bottom: 10px;
+}
+
+.tip-percent > div,
+.bill > div,
+.people-nums div {
+	display: flex;
+	justify-content: space-between;
+}
+
+.warn-msg {
+	display: none;
+	color: #ff5353 !important;
+	opacity: 0.8;
+	font-size: 0.8rem;
+	font-weight: 600 !important;
+	animation: show 0.6s ease-in forwards;
+}
+
+@keyframes show {
+	0% {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 /* ------------------------- Title ----------------- */
@@ -115,6 +143,14 @@ input:focus {
 	padding: 10px;
 }
 
+.bill.warn input {
+	border-color: #ff5353;
+}
+
+.bill.warn .warn-msg {
+	display: block;
+}
+
 /* ------------------------Section: tip-percent------------------- */
 
 .tip-percent .percents {
@@ -157,6 +193,11 @@ input:focus {
 	opacity: 0.7;
 }
 
+.percents div.select:not(.input) {
+	background-color: var(--Strong-cyan);
+	color: var(--Very-dark-cyan);
+}
+
 /* ------------------------Section: People Numbers */
 
 .people-nums {
@@ -181,11 +222,17 @@ input:focus {
 	background: url('/images/icon-dollar.svg') no-repeat;
 	object-fit: contain;
 	position: absolute;
-	/* height: 10px; */
-	/* width: 10px; */
 	left: 10px;
 	top: 12px;
 	padding: 10px;
+}
+
+.people-nums.warn input {
+	border-color: #ff5353;
+}
+
+.people-nums.warn .warn-msg {
+	display: block;
 }
 
 /* ----------------------------- Section: Show Tip ----------------- */
