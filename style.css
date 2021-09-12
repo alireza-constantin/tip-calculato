@@ -219,7 +219,7 @@ input:focus {
 
 .people-nums .input::after {
 	content: '';
-	background: url('/images/icon-dollar.svg') no-repeat;
+	background: url('/images/icon-person.svg') no-repeat;
 	object-fit: contain;
 	position: absolute;
 	left: 10px;
@@ -280,9 +280,21 @@ input:focus {
 	width: 100%;
 	color: var(--Very-dark-cyan);
 	text-align: center;
-	font-size: 14px;
+	font-size: 1rem;
 	border-radius: 5px;
 	padding: 0.45rem 0;
+	cursor: unset;
+	font-weight: 900;
+}
+
+.tip .btn.on {
+	cursor: pointer;
+	background-color: var(--Strong-cyan);
+	color: var(--Very-dark-cyan);
+}
+
+.tip .btn.on:hover {
+	background-color: var(--Light-grayish-cyan);
 }
 
 @media (max-width: 1000px) {
