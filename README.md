@@ -2,8 +2,8 @@
 
 ![Design preview for the Order summary card coding challenge](./images/desktop-preview.jpg)
 
-## **Base Apparel Coming Soon**
+## **Tip Calculator**
 
-- **Level : `NEWBIE`**
+- **Level : `JUNIOR`**
 
 - **Lang : `HTML, CSS, JS`**
